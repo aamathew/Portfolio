@@ -1,3 +1,10 @@
+/* CSS code snippet that sets some styling rules for all elements on a web page. */
+/* * selects all elements on the page.
+margin: 0; sets the margin property to 0, which removes any margins around the elements. 
+padding: 0; sets the padding property to 0, which removes any padding within the elements. 
+font-family: 'Poppins', sans-serif; sets the font-family property to 'Poppins', which is a specific font. If 'Poppins' is not available, the browser will fall back to a sans-serif font.
+box-sizing: border-box; sets the box-sizing property to border-box,the specified width and height values will include the padding and border, rather than expanding the element's dimensions. */
+
 *{
     margin:  0;
     padding: 0;
@@ -9,6 +16,8 @@ body{
     background: #080808;
     color: #fff;
 }
+
+/* Properties for header */
 #header{
     width: 100%;
     /* height: 100vh; */
@@ -16,26 +25,55 @@ body{
     background-size: cover;
     background-position: center;
 }
+/* 
+selects the elements with the class "container". Classes are used to group and style multiple elements on a web page. */
+/* sets the padding property of the "container" elements to 10px on the top and bottom, and 10% of the container's width on the left and right. */
 .container{
     padding: 10px 10%;
 }
+/* <nav> element is typically used to represent a section of a webpage that contains navigation links.
+display: flex; sets the display property to flex.
+This allows the <nav> element and its child elements to be laid out using flexbox, which provides flexible and responsive alignment and positioning capabilities.
+Sets the align-items property to center. This aligns the child elements vertically within the <nav> element, ensuring they are centered along the cross-axis.
+justify-content: space-between; sets the justify-content property to space-between. This distributes the child elements horizontally within the <nav> element, pushing the first element to the left edge and the last element to the right edge, with equal space between each element.
+flex-wrap: wrap; sets the flex-wrap property to wrap. This allows the child elements of the <nav> element to wrap onto multiple lines if they exceed the width of the container, ensuring that all elements are visible and properly laid out. */
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+/* display: inline-block; - The <li> elements will be displayed as inline blocks. This allows them to appear horizontally next to each other.
+list-style: none; - The default bullet points or numbering that is typically displayed for list items will be removed.
+margin: 10px 20px; - The margin around the <li> elements will be set to 10 pixels on the top and bottom, and 20 pixels on the left and right. This provides spacing between the list items. */
+
 nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px  20px;
 }
+
+/* targets the <a> elements that are descendants of <li> elements within <ul> elements, which in turn are descendants of the <nav> element. It sets the following CSS rules:
+color: red; - The text color of the <a> elements will be set to red.
+text-decoration: none; - The default underline or strike-through decoration for the text within the <a> elements will be removed.
+font-size: 20px; - The font size of the text within the <a> elements will be set to 20 pixels.
+position: relative; - The <a> elements will be positioned relative to their normal position within the document flow. This allows for further positioning adjustments using pro */
 nav ul li a{
     color: red;
     text-decoration: none;
     font-size: 20px;
     position: relative;
 }
+/* targets the pseudo-element ::after of the <a> elements that are descendants of <li> elements within <ul> elements, which in turn are descendants of the <nav> element. It sets the following CSS rules for the pseudo-element:
+content: ''; - The pseudo-element will have no content.
+width: 0; - The width of the pseudo-element will be set to 0 pixels.
+height: 5px; - The height of the pseudo-element will be set to 5 pixels.
+background: #fff; - The background color of the pseudo-element will be white.
+position: absolute; - The pseudo-element will be positioned absolutely, relative to its nearest positioned ancestor.
+left: 0; - The pseudo-element will be positioned flush with the left edge of its containing element.
+bottom: -6px; - The pseudo-element will be positioned 6 pixels above the bottom edge of its containing element.
+transition: 0.3s; - The transition property will be applied with a duration of 0.3 seconds, allowing for smooth animations when the pseudo-element's properties change. */
 nav ul li a::after{
     content: '';
     width: 0;
@@ -46,19 +84,94 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.3s;
 }
+/* targets the ::after pseudo-element of the <a> elements when the <a> elements are being hovered over. 
+width: 100%; - The width of the pseudo-element will be set to 100% of its containing element.
+This rule modifies the width property of the ::after pseudo-element when the associated <a> element is being hovered over. By setting the width to 100%, the pseudo-element will extend across the entire width of its containing <a> element. */
 nav ul li a:hover::after{
     width: 100%;
 }
+/* The code snippet you provided targets elements with the class "header-text" and sets the following CSS rules:
+margin-top: 20%; - The top margin of the elements with the "header-text" class will be set to 20% of their parent container's height. This will create vertical spacing or push the elements down by 20% of the available vertical space.
+font-size: 30px; - The font size of the elements with the "header-text" class will be set to 30 pixels.
+These rules are applied to elements that have the "header-text" class assigned to them. By setting the top margin to 20% and the font size to 30 pixels, you can adjust the vertical spacing and the size of the text for elements with this class.  */
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
 }
+/* The code snippet you provided targets the <h1> elements that are descendants of elements with the class "header-text". It sets the following CSS rules:
+font-size: 60px; - The font size of the <h1> elements will be set to 60 pixels.
+margin-top: 20px; - The top margin of the <h1> elements will be set to 20 pixels.
+These rules are specifically applied to <h1> elements within elements that have the "header-text" class assigned to them. By setting the font size to 60 pixels and the top margin to 20 pixels, you can adjust the size and spacing of the <h1> elements within the "header-text" elements. */
+
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
 }
+/* targets the <span> elements that are descendants of <h1> elements, which in turn are descendants of elements with the class "header-text". It sets the following CSS rule:
+color: #ff004f; - The text color of the <span> elements will be set to a specific shade of pink (#ff004f).
+These rules specifically apply to <span> elements within <h1> elements, which are further nested within elements that have the "header-text" class assigned to them. By setting the text color to #ff004f, you can customize the color of the text within the <span> */
+
 .header-text h1 span{
     color: #ff004f;
 }
+/* About Me */
+#about{
+    padding: 80px 0;
+    color:blue
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff
+}
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
 
-
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position:absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
