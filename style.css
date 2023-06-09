@@ -114,32 +114,57 @@ These rules specifically apply to <span> elements within <h1> elements, which ar
 
 .header-text h1 span{
     color: #ff004f;
-}
+/* }
 /* About Me */
+/* #about: Selects the element with the ID "about".
+padding: 80px 0;: Sets the top and bottom padding of the selected element to 80 pixels and the left and right padding to 0 pixels.
+color: blue;: Sets the text color of the selected element to blue. */ */
 #about{
     padding: 80px 0;
     color:blue
 }
+/* .row: Selects elements with the class "row".
+display: flex;: Sets the selected elements to be displayed as a flexible container.
+justify-content: space-between;: Aligns the child elements of the container with equal space between them, pushing the first element to the start and the last element to the end.
+flex-wrap: wrap;: Allows the elements to wrap onto multiple lines when there is not enough space. */
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+/* .about-col-1: Selects elements with the class "about-col-1".
+.about-col-2: Selects elements with the class "about-col-2".
+flex-basis: 35%; / flex-basis: 60%;: Sets the initial size of the flexible items to be 35% and 60% of the available space in their container, respectively. */
 .about-col-1{
     flex-basis: 35%;
 }
 .about-col-2{
     flex-basis: 60%;
 }
+/* .sub-title: Selects elements with the class "sub-title".
+font-size: 60px;: Sets the font size of the selected elements to 60 pixels.
+font-weight: 600;: Sets the font weight of the selected elements to 600 (semi-bold).
+color: #fff;: Sets the text color of the selected elements to white. */
+
 .sub-title{
     font-size: 60px;
     font-weight: 600;
     color:#fff
 }
+/* .tab-titles is the class selector for an HTML element. It sets the following styles for elements with the class "tab-titles":
+display: flex; makes the element a flex container.
+margin: 20px 0 40px; sets the top margin to 20 pixels, the bottom margin to 40 pixels, and no margin on the left or right. */
+
 .tab-titles{
     display:flex;
     margin: 20px 0 40px;
 }
+/* .tab-links is the class selector for an HTML element. It sets the following styles for elements with the class "tab-links":
+margin: 50px; sets a margin of 50 pixels on all sides of the element.
+font-size: 20px; sets the font size to 20 pixels.
+font-weight: 500; sets the font weight to 500 (medium).
+cursor: pointer; changes the cursor to a pointer when hovering over the element, indicating it is clickable.
+position: relative; positions the element relative to its normal position. */
 .tab-links{
     margin: 50px;
     font-size: 20px;
@@ -148,6 +173,16 @@ These rules specifically apply to <span> elements within <h1> elements, which ar
     position: relative;
 
 }
+/* .tab-links::after uses the ::after pseudo-element to add content after the element's content. It sets the following styles for the pseudo-element:
+content: ''; inserts no content.
+width: 0; sets the width of the pseudo-element to 0.
+height: 3px; sets the height of the pseudo-element to 3 pixels.
+background: #ff004f; sets the background color of the pseudo-element to a specific shade of red (#ff004f).
+position: absolute; positions the pseudo-element absolutely, relative to its closest positioned ancestor.
+left: 0; aligns the left edge of the pseudo-element with the left edge of its containing element.
+bottom: -8px; places the bottom edge of the pseudo-element 8 pixels above the bottom edge of its containing element.
+transition: 0.3s; adds a transition effect to the pseudo-element with a duration of 0.3 seconds. */
+
 .tab-links::after{
     content: '';
     width: 0;
@@ -158,51 +193,96 @@ These rules specifically apply to <span> elements within <h1> elements, which ar
     bottom: -8px;
     transition: 0.3s;
 }
+/* .tab-links.active-link::after selects the pseudo-element created by the ::after selector when the element has the class "active-link". It sets the following styles for the pseudo-element in this state:
+width: 50%; sets the width of the pseudo-element to 50%, effectively extending its length to half the width of its containing element. */
 .tab-links.active-link::after{
     width: 50%;
 }
+/* .tab-contents ul li selects the list items within an unordered list inside an element with the class "tab-contents". It sets the following styles for those list items:
+list-style: none; removes the default bullet points or numbering from the list items.
+margin: 10px 0; sets a margin of 10 pixels on the top and bottom of each list item. */
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
 }
+/* .tab-contents ul li span selects the <span> elements within the list items within an unordered list inside an element with the class "tab-contents". It sets the following styles for those <span> elements:
+color: #ff004f; sets the text color to a specific shade of red (#ff004f).
+font-size: 14px; sets the font size to 14 pixels. */
+
 .tab-contents ul li span{
     color: #ff004f;
     font-size: 14px;
 }
+/* .tab-contents selects elements with the class "tab-contents". It sets the following styles for those elements:
+
+display: none; initially hides the elements by setting their display property to none. */
 .tab-contents{
     display: none;
 }
+/* .tab-contents.active-tab selects elements with both the classes "tab-contents" and "active-tab". It sets the following styles for those elements:
+
+display: block; displays the elements as block-level elements, making them visible. */
+
 .tab-contents.active-tab{
     display: block;
 }
+/* #portfolio is the ID selector for an HTML element. It sets the following styles for the element with the ID "portfolio":
+padding: 50px 0; adds 50 pixels of padding at the top and bottom of the element. */
 #portfolio{
     padding: 50px 0;
 }
+/* .project-list is the class selector for an HTML element. It sets the following styles for elements with the class "project-list":
+display: grid; makes the element a grid container.
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); defines the columns of the grid. It uses the repeat() function to automatically fit as many columns as possible with a minimum width of 250 pixels and a maximum width of 1fr (equal distribution of available space).
+grid-gap: 40px; sets a gap of 40 pixels between grid cells.
+margin-top: 50px; adds a top margin of 50 pixels to the element. */
 .project-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
-}
+/* }
+.project is the class selector for an HTML element. It sets the following styles for elements with the class "project":
+border-radius: 10px; adds a border radius of 10 pixels, giving the element rounded corners.
+position: relative; positions the element relative to its normal position.
+overflow: hidden; clips any content that exceeds the size of the element, hiding the overflow. */
 .project{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
+/* .project img selects the <img> elements within an element with the class "project". It sets the following styles for those <img> elements:
+width: 25%; sets the width of the images to 25% of their containing element, scaling them down.
+border-radius: 10px; adds a border radius of 10 pixels, giving the images rounded corners.
+display: block; makes the images display as block-level elements, allowing for additional positioning and styling.
+css */
+
 .project img{
     width: 25%;
     border-radius: 10px;
     display: block;
 }
+/* .contact is the class selector for an HTML element. It sets the following style for elements with the class "contact":
+margin-top: 2rem; adds a top margin of 2rem (or 2 times the size of the font used) to the element. */
 .contact {
     margin-top: 2rem;
-  }
-  
+  /* }
+  .contact h2 selects the <h2> elements within an element with the class "contact". It sets the following styles for those <h2> elements:
+text-align: center; centers the text horizontally within the element.
+margin-bottom: var(--bottom-margin-2); sets the bottom margin to a custom CSS variable --bottom-margin-2. The actual value of the variable will determine the specific margin. */
+
   .contact h2 {
     text-align: center;
     margin-bottom: var(--bottom-margin-2);
   }
-  
+
+  /* .contact-form-container is the class selector for an HTML element. It sets the following styles for elements with the class "contact-form-container":
+max-width: 40.75rem; sets the maximum width of the element to 40.75rem.
+margin: 0 auto; centers the element horizontally by setting the left and right margins to auto.
+padding: 0.938rem; adds padding of 0.938rem (or 0.938 times the size of the font used) to the element.
+border-radius: 5px; adds a border radius of 5 pixels, giving the element rounded corners.
+box-shadow: 0 3px 10px var(--secondary-shadow); adds a box shadow to the element. The specific shadow style is determined by the value of the CSS variable --secondary-shadow. */
+
   .contact-form-container {
     max-width: 40.75rem;
     margin: 0 auto;
@@ -210,6 +290,17 @@ These rules specifically apply to <span> elements within <h1> elements, which ar
     border-radius: 5px;
     box-shadow: 0 3px 10px var(--secondary-shadow);
   }
+  /* .submit-btn is the class selector for an HTML element. It sets the following styles for elements with the class "submit-btn":
+width: 100%; sets the width of the element to 100% of its containing element.
+padding: 10px; adds padding of 10 pixels to the element.
+margin: 10px 0; sets the top and bottom margins to 10 pixels and the left and right margins to 0.
+background-color: #fff; sets the background color of the element to white.
+border: 2px solid var(--primary-color); sets a 2-pixel solid border around the element. The specific border color is determined by the value of the CSS variable --primary-color.
+border-radius: 5px; adds a border radius of 5 pixels, giving the element rounded corners.
+font-size: 1rem; sets the font size to 1rem (or 1 times the size of the font used).
+font-weight: var(--bold-font); sets the font weight to a custom CSS variable --bold-font. The actual value of the variable will determine the specific font weight.
+transition: var(--transition); adds a transition effect to the element. The specific transition properties and durations are determined by the value of the CSS variable --transition. */
+
   .submit-btn {
     width: 100%;
     padding: 10px;
@@ -221,6 +312,12 @@ These rules specifically apply to <span> elements within <h1> elements, which ar
     font-weight: var(--bold-font);
     transition: var(--transition);
   }
+  /* .submit-btn:hover selects the element with the class "submit-btn" when the user hovers over it. It sets the following styles for that state:
+  background-color: var(--primary-color); changes the background color to the value of the CSS variable --primary-color when hovering.
+  border: 2px solid var(--primary-color); changes the border color to the value of the CSS variable --primary-color when hovering.
+  cursor: pointer; changes the cursor to a pointer when hovering over the element, indicating it is clickable. */
+  
+
   .submit-btn:hover {
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
