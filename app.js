@@ -32,6 +32,41 @@ $(document).ready(function() {
       });
     });
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const submitBtn = document.querySelector('.submit-btn');
+  
+    submitBtn.style.width = '100%';
+    submitBtn.style.padding = '10px';
+    submitBtn.style.margin = '10px 0';
+    submitBtn.style.backgroundColor = '#fff';
+    submitBtn.style.border = '2px solid var(--primary-color)';
+    submitBtn.style.borderRadius = '5px';
+    submitBtn.style.fontSize = '1rem';
+    submitBtn.style.fontWeight = 'var(--bold-font)';
+    submitBtn.style.transition = 'var(--transition)';
+  });
+// Select the .submit-btn element
+const submitBtn = document.querySelector('.submit-btn');
+
+// Add event listener for mouseover (hover) event
+submitBtn.addEventListener('mouseover', function() {
+  submitBtn.style.backgroundColor = 'var(--primary-color)';
+  submitBtn.style.border = '2px solid var(--primary-color)';
+  submitBtn.style.cursor = 'pointer';
+});
+
+// Add event listener for mouseout event (when hover ends)
+submitBtn.addEventListener('mouseout', function() {
+  submitBtn.style.backgroundColor = '#fff';
+  submitBtn.style.border = '2px solid var(--primary-color)';
+  submitBtn.style.cursor = 'auto';
+});
+  
+
+
+
+
+
   // $(document).ready(function() {:
   //   This line sets up a function to be executed when the document (HTML) has finished loading. It ensures that the code inside the function will run only when the document is ready.
     
