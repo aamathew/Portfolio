@@ -31,6 +31,7 @@ $(document).ready(function() {
         }
       });
     });
+
   });
   document.addEventListener('DOMContentLoaded', function() {
     const submitBtn = document.querySelector('.submit-btn');
@@ -45,25 +46,36 @@ $(document).ready(function() {
     submitBtn.style.fontWeight = 'var(--bold-font)';
     submitBtn.style.transition = 'var(--transition)';
   });
-// Select the .submit-btn element
-const submitBtn = document.querySelector('.submit-btn');
 
-// Add event listener for mouseover (hover) event
-submitBtn.addEventListener('mouseover', function() {
-  submitBtn.style.backgroundColor = 'var(--primary-color)';
-  submitBtn.style.border = '2px solid var(--primary-color)';
-  submitBtn.style.cursor = 'pointer';
+  $(document).ready(function() {
+  $('#colorButton').click(function() {
+    
+    var colors = ['red', 'blue', 'green', 'yellow'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    $('body').css('background-color', randomColor);
+  })
 });
 
-// Add event listener for mouseout event (when hover ends)
-submitBtn.addEventListener('mouseout', function() {
-  submitBtn.style.backgroundColor = '#fff';
-  submitBtn.style.border = '2px solid var(--primary-color)';
-  submitBtn.style.cursor = 'auto';
+$(document).ready(function() {
+  $(`#about-me-header`).click(function() {
+    $(`#aboutmetext`).toggle()
+  })
 });
-  
 
-
+$(document).ready(function() {
+  $(`#project1`).mouseleave(function(){
+    console.log('mouse leave');
+    var colors = ['red', 'blue', 'green', 'yellow'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    $(`#project1`).css(`color`,randomColor);
+  })
+  $(`#project1`).mouseenter(function(){
+    console.log('mouse enter');
+    var colors = ['red', 'blue', 'green', 'yellow'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    $(`#project1`).css(`color`,randomColor);
+  })
+})
 
 
 
@@ -104,3 +116,13 @@ submitBtn.addEventListener('mouseout', function() {
 //   This line logs a success message to the browser's console, indicating that the form was submitted successfully. 
 // console.log("Form submission failed");:
 // This line logs an error message to the console if the AJAX request fails. It indicates that the form submission was not successful.
+
+
+// button to change backgroundColor
+// $(document).ready(function() {
+//   $('#colorButton').click(function() {
+//     var colors = ['red', 'blue', 'green', 'yellow'];
+//     var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//     $('#targetElement').css('background-color', randomColor);
+//   });
+// });

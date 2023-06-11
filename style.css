@@ -60,7 +60,7 @@ text-decoration: none; - The default underline or strike-through decoration for 
 font-size: 20px; - The font size of the text within the <a> elements will be set to 20 pixels.
 position: relative; - The <a> elements will be positioned relative to their normal position within the document flow. This allows for further positioning adjustments using pro */
 nav ul li a{
-    color: red;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     position: relative;
@@ -118,7 +118,7 @@ These rules specifically apply to <span> elements within <h1> elements, which ar
 /* About Me */
 #about{
     padding: 80px 0;
-    color:blue
+    color:white
 }
 .row{
     display: flex;
@@ -336,4 +336,5 @@ transition: var(--transition); adds a transition effect to the element. The spec
 background-color: var(--primary-color); changes the background color to the value of the CSS variable --primary-color when hovering.
 border: 2px solid var(--primary-color); changes the border color to the value of the CSS variable --primary-color when hovering.
 cursor: pointer; changes the cursor to a pointer when hovering over the element, indicating it is clickable. */
+
 
